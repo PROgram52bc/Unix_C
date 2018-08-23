@@ -40,6 +40,7 @@ int main(int argc, char* argv[])
 			fprintf(stderr, "%s? (y/n/q)", buf); 
 			char answer = fgetc(stdin);
 			// clear keyboard buffer
+			ungetc(answer, stdin); // prevent waiting for input
 			char ch; while ((ch = getc(stdin)) != '\n' && ch != EOF); 
 			if (answer == 'y')
 			{
