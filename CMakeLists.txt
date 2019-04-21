@@ -1,0 +1,5 @@
+cmake_minimum_required (VERSION 3.0.0)
+project (unix)
+add_executable(catmult catmult.c)
+add_executable(vis vis.c)
+add_executable(zap zap.c)
